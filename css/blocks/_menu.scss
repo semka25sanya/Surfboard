@@ -1,0 +1,17 @@
+.menu {
+  margin: 0;
+
+&__list {
+  display: flex;
+  font-weight: bold;
+}
+&__item {
+  margin-right: 22px;
+}
+&__link{
+  text-decoration: 0;
+  &:hover {
+    color: #FEDB3F;;
+  }
+}
+}

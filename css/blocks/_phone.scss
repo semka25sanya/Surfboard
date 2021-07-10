@@ -1,0 +1,14 @@
+.phone {
+  text-decoration: none;
+  font-weight: bold;
+font-size: 22px;
+
+&--normal {
+  font-weight: normal;
+font-size: 21px;
+}
+&:before {
+content: url(/img/tel.png);
+margin-right: 5px;
+}
+}

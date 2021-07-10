@@ -1,0 +1,21 @@
+.button {
+  color: #000;
+  background-color: #FEDB3F;
+  border-radius: 100px;
+  padding: 21px 41px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+font-size: 16px;
+margin-bottom: 85px;
+border: transparent;
+
+&--transparent {
+  background: transparent;
+  color: #fff;
+}
+&:hover {
+  background-color:#fff ;
+  color: #FEDB3F;
+}
+}
