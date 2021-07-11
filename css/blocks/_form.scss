@@ -1,13 +1,13 @@
 .form {
- 
-  color: #FFFFFF;
-
-
-&__wrapper {
   background:url(../img/review.background.jpg) center no-repeat;
+  color: #FFFFFF;
   height: 652px;
-width: 1100px;
-}
+
+// &__wrapper {
+  
+//   height: 652px;
+// width: 1100px;
+// }
 
 &__title-main {
   font-weight: bold;

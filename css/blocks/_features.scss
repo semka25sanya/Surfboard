@@ -36,9 +36,33 @@ margin-bottom: 49px;
 
 &__item {
   display: flex;
+  flex:1;
+  margin: 0 20px;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
+ &:before {
+   content: url(../img/points.png);
+   position: absolute;
+   top: 60px;
+    right: -20px;
+   transform: translateX(50%);
+
+  
+ }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    &:before {
+      display: none;
+    }
+  }
 }
 
 &__paragraph{
@@ -66,6 +90,10 @@ width: 68px;
   left: 50%;
   transform: translate(43%, 40%);
   margin-bottom: 20px;
+  &--fit {
+    width: 43px;
+    margin-left: 22px;
+  }
     &:before {
     content: url(../../img/DgxOuVVhMvw.jpg);
     position: absolute;

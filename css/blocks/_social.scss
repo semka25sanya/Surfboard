@@ -17,10 +17,18 @@ margin-right: 14px;
 
 &__item--vk &__link{
   background-image: url(../img/vk.png);
+
+  &:hover {
+    background-image: url(../img/vk.hover.png);
+    width: 24px;
+    height: 24px;
+  }
   }
 
 &__item--f &__link{
   background-image: url(../img/f.png);
+
+  
   }
 
 
@@ -30,6 +38,10 @@ background: url(../img/insta.png);
 
 &__item--tw &__link{
 background:url(../img/tw.png);
+
+&:hover {
+  background-image: url(../img/twitter-hover.png);
+}
 }
 
 }

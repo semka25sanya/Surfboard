@@ -1,5 +1,5 @@
 .header {
-  margin: 0;
+  padding-top: 24px;
 
 &__content {
   display: flex;
@@ -10,14 +10,4 @@
   margin-bottom: 102px;
 
 }
-
-&__wrapper {
-  background: url(../img/header.backgroungd.png) center top no-repeat;
-  min-height: 652px;
-  
-  padding: 23px 80px;
-  margin-bottom: 103px;
-}
-
-
 }
