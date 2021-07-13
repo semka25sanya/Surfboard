@@ -419,6 +419,7 @@ template {
 
 .features {
   color: #666;
+  margin-top: 106px;
 }
 .features__content {
   display: -webkit-box;
@@ -551,9 +552,8 @@ template {
 }
 
 .form {
-  background: url(../img/review.background.jpg) center no-repeat;
+  background: url(../img/review.background.jpg) center center/cover no-repeat;
   color: #FFFFFF;
-  height: 652px;
 }
 .form__title-main {
   font-weight: bold;
@@ -679,7 +679,6 @@ template {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 85px;
-  padding-bottom: 69px;
 }
 .hero_bottom__item {
   display: -webkit-box;
@@ -809,8 +808,8 @@ template {
   width: 24px;
   height: 24px;
 }
-.social__item--f .social__link {
-  background-image: url(../img/f.png);
+.social__item--fb .social__link {
+  background-image: url(../img/fb.png);
 }
 .social__item--insta .social__link {
   background: url(../img/insta.png);
@@ -941,6 +940,9 @@ template {
 }
 
 .about {
-  background: url(../img/header.backgroungd.png) center top no-repeat;
-  margin-bottom: 103px;
+  background: url(../img/header.backgroungd.png) center center/cover no-repeat;
+}
+
+.section {
+  height: 100vh;
 }
