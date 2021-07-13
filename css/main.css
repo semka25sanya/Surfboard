@@ -912,30 +912,29 @@ template {
 
 .fixed-menu {
   position: fixed;
-  top: 50%;
-  right: 4px;
+  right: 4%;
+  top: 30%;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 .fixed-menu__item {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
-.fixed-menu__item--active .fixed-menu__link {
+.fixed-menu__item.active .fixed-menu__link {
   border: 1px solid #fff;
 }
-.fixed-menu__item--active .fixed-menu__link:after {
+.fixed-menu__item.active .fixed-menu__link::after {
   background: #fff;
 }
-.fixed-menu__item--active__link {
-  display: block;
+.fixed-menu__link {
   position: relative;
-  width: 16px;
-  height: 16px;
+  display: block;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  border: 1px solid transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -949,13 +948,13 @@ template {
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
-.fixed-menu__item--active__link:before {
+.fixed-menu__link::after {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
   content: "";
   display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -964,10 +963,10 @@ template {
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
-.fixed-menu__item--active__link:hover {
+.fixed-menu__link:hover {
   border: 1px solid #fff;
 }
-.fixed-menu__item--active__link:hover::after {
+.fixed-menu__link:hover::after {
   background: #fff;
 }
 
