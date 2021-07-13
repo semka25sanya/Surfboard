@@ -1,7 +1,10 @@
 .hero {
   color: #fff;
 
-
+&__container {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 &__title {
   font-weight: bold;
   font-size: 48px;
