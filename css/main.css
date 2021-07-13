@@ -652,6 +652,7 @@ template {
   padding-top: 24px;
 }
 .header__content {
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -736,6 +737,7 @@ template {
   display: -ms-flexbox;
   display: flex;
   font-weight: bold;
+  margin: 0 35px;
 }
 .menu__item {
   margin-right: 22px;

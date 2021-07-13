@@ -4,6 +4,7 @@
 &__list {
   display: flex;
   font-weight: bold;
+  margin: 0 35px;
 }
 &__item {
   margin-right: 22px;
@@ -13,5 +14,5 @@
   &:hover {
     color: #FEDB3F;;
   }
-}
+ }
 }
