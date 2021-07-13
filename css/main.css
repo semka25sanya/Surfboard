@@ -557,7 +557,12 @@ template {
   right: 0;
 }
 
+.footer {
+  background: #fff;
+}
 .footer__content {
+  background: #fff;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,6 +573,10 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.footer__map {
+  position: absolute;
+  bottom: 0;
 }
 
 .form {

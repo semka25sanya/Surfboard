@@ -1,6 +1,20 @@
-.footer__content {
+.footer {
+  background: #fff;
+  
+
+
+&__content {
+  background: #fff;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 17px 80px;
   align-items: center;
+  
+}
+&__map {
+  position: absolute;
+  bottom: 0;
+
+}
 }
