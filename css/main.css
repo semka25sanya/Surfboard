@@ -924,12 +924,12 @@ template {
   transition: 0.5s all;
 }
 .fixed-menu__item--active .fixed-menu__link {
-  border-color: 1px solid #fff;
+  border: 1px solid #fff;
 }
 .fixed-menu__item--active .fixed-menu__link:after {
   background: #fff;
 }
-.fixed-menu__item__link {
+.fixed-menu__item--active__link {
   display: block;
   position: relative;
   width: 16px;
@@ -949,7 +949,7 @@ template {
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
-.fixed-menu__item__link:before {
+.fixed-menu__item--active__link:before {
   content: "";
   display: block;
   width: 6px;
@@ -964,10 +964,10 @@ template {
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
-.fixed-menu__item__link:hover {
+.fixed-menu__item--active__link:hover {
   border: 1px solid #fff;
 }
-.fixed-menu__item__link:hover::after {
+.fixed-menu__item--active__link:hover::after {
   background: #fff;
 }
 
@@ -995,6 +995,10 @@ template {
 .phone:before {
   content: url(../img/tel.png);
   margin-right: 5px;
+}
+
+.map {
+  position: relative;
 }
 
 .map__img {

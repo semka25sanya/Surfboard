@@ -14,10 +14,10 @@
 
 &--active {
   .fixed-menu__link{
-border-color:1px solid #fff ;
+border:1px solid #fff ;
 &:after {
   background: #fff;
-}
+
 }
 }
 
@@ -55,5 +55,5 @@ border-color:1px solid #fff ;
 
 }
 }
-
+}
 }
