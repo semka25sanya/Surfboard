@@ -1,8 +1,10 @@
 .header {
   padding-top: 24px;
+  
 
 &__content {
   display: flex;
+  position: absolute;
   flex-direction: row;
   justify-content: space-between;
   color: #fff;
