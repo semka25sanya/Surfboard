@@ -1,5 +1,10 @@
+$tablets:768px;
+$phones:480px;
+
+
 $z-index-menu:100;
 
+@import "./blocks/_media.scss";
 @import "./blocks/_base.scss";
 @import "./blocks/_normalize.scss";
 @import "./blocks/_button.scss";
@@ -16,6 +21,7 @@ $z-index-menu:100;
 @import "./blocks/_fixed-menu.scss";
 @import "./blocks/_interactive-avatar.scss";
 @import "./blocks/_phone.scss";
-@import "./blocks/map.scss";
-@import "./blocks/about";
+@import "./blocks/_map.scss";
+@import "./blocks/_about.scss";
+
 

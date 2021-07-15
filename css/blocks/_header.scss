@@ -1,5 +1,5 @@
 .header {
-  padding-top: 24px;
+  padding-top: rem(24px);
   
 
 &__content {
@@ -9,7 +9,7 @@
   justify-content: space-between;
   color: #fff;
   align-items: center;
-  margin-bottom: 102px;
+  margin-bottom: rem(102px);
 
 }
 }

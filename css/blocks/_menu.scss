@@ -4,10 +4,10 @@
 &__list {
   display: flex;
   font-weight: bold;
-  margin: 0 35px;
+  margin: 0 rem(35px);
 }
 &__item {
-  margin-right: 22px;
+  margin-right: rem(22px);
 }
 &__link{
   text-decoration: 0;

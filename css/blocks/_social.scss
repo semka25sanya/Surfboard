@@ -4,15 +4,15 @@
 &__link {
   display: block;
   text-decoration: 0;
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
   background: center center no-repeat;
 }
 
 &__item {
 display: inline-block;
 vertical-align: middle;
-margin-right: 14px;
+margin-right: rem(14px);
 }
 
 &__item--vk &__link{
@@ -20,8 +20,8 @@ margin-right: 14px;
 
   &:hover {
     background-image: url(../img/vk.hover.png);
-    width: 24px;
-    height: 24px;
+    width: rem(24px);
+    height: rem(24px);
   }
   }
 
