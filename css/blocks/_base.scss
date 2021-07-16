@@ -1,5 +1,11 @@
 html {
   font-size: rem(16px);
+      @include tablets {
+      font-size: rem(15px);
+    }
+    @include phones {
+      font-size: rem(14px);
+    }
 }
 
 html, body {
@@ -47,7 +53,7 @@ img {
 }
 .container {
   // font-size: 18px;
-  max-width: 940px;
+  max-width: rem(940px);
   margin: 0 auto;
   width: 95%;
   // height: 100%;
@@ -57,9 +63,20 @@ img {
   justify-content: center;
 }
 
-.adress {
+.address {
   font-weight: normal;
 font-size: rem(21px);
 color: #292929;
+@include phones {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+&__info {
+  @include phones {
+    font-size: rem(16px);
+  }
+}
 
 }

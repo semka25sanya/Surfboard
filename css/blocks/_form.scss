@@ -22,6 +22,9 @@ padding-top: rem(60px);
   padding: rem(82px);
   display: flex;
   /* margin-bottom: rem(68px); */
+  @include tablets {
+    flex-direction: column;
+  }
 }
 &__col {
   flex: 1;
@@ -67,5 +70,10 @@ padding-top: rem(60px);
 }
 &__buttons {
   margin-top: rem(47px);
+
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
 }
 }

@@ -6,6 +6,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include phones{
+    align-items: center;
+    justify-content: center;
+  }
 }
 &__title {
   font-weight: bold;
@@ -17,7 +21,9 @@ font-weight: bold;
 font-size: rem(48px);
 text-transform: uppercase;
 margin-bottom: rem(17px);
-color: #292929;;
+color: #292929;
+
+
 }
 &__text {
 font-size: rem(18px);
@@ -25,6 +31,9 @@ line-height: rem(22px);
 width: rem(436px);
 text-align: center;
 margin-bottom: rem(49px);
+@include phones{
+  padding: 0 rem(20px);
+}
 }
 
 &__list {
@@ -33,6 +42,10 @@ margin-bottom: rem(49px);
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: rem(114px);
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 &__item {
@@ -43,14 +56,27 @@ margin-bottom: rem(49px);
   align-items: center;
   text-align: center;
   position: relative;
+  @include tablets {
+    margin: 0;
+  }
+  @include phones {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
  &:before {
    content: url(../img/points.png);
    position: absolute;
    top: rem(60px);
     right: rem(-20px);
    transform: translateX(50%);
-
-  
+@include tablets {
+  display: none;
+}
+@include phones {
+  display: none;
+}
  }
 
   &:first-child {
@@ -82,6 +108,10 @@ width: rem(279px);
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: rem(20px);
+  @include phones {
+    margin-bottom: 0;
+    margin-right: rem(10px);
+  }
 }
 
 &__icon {
@@ -100,6 +130,8 @@ width: rem(68px);
     position: absolute;
     top: rem(30px);
     right: 0;
+
+    
     }
   }
 }

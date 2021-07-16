@@ -19,6 +19,22 @@ margin-bottom: rem(32px);
   align-items: center;
   margin-bottom: rem(15px);
   align-items: center;
+  &__pic {
+    align-items: center;
+  }
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  &__img {
+    @include tablets {
+      width: rem(130px);
+      height: rem(132px);
+      align-items: center;
+      margin-bottom: 32px;
+    }
+  }
 
 &__content {
   display: flex;

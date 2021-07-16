@@ -16,32 +16,25 @@ margin-right: rem(14px);
 }
 
 &__item--vk &__link{
-  background-image: url(../img/vk.png);
+  background-image: url(../img/vk.svg);
 
-  &:hover {
-    background-image: url(../img/vk.hover.png);
-    width: rem(24px);
-    height: rem(24px);
-  }
   }
 
 &__item--fb &__link{
-  background-image: url(../img/fb.png);
+  background-image: url(../img/fb.svg);
 
   
   }
 
 
 &__item--insta &__link{
-background: url(../img/insta.png);
+background: url(../img/insta.svg);
 }
 
 &__item--tw &__link{
-background:url(../img/tw.png);
+background:url(../img/tw.svg);
 
-&:hover {
-  background-image: url(../img/twitter-hover.png);
-}
+
 }
 
 }

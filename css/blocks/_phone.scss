@@ -2,13 +2,23 @@
   text-decoration: none;
   font-weight: bold;
 font-size: rem(22px);
+white-space: nowrap;
 
 &--normal {
   font-weight: normal;
 font-size: rem(21px);
 }
-&:before {
-content: url(../img/tel.png);
+    &:before {
+content: url(../img/phone.svg);
 margin-right: rem(5px);
+flex-shrink: 0;
+}
+
+&--dark {
+  &:before {
+    content: url(../img/phone--dark.svg);
+    margin-right: rem(5px);
+    flex-shrink: 0;
+}
 }
 }
