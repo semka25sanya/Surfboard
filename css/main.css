@@ -533,6 +533,12 @@ template {
           justify-content: space-between;
   margin-bottom: 7.125rem;
 }
+@media screen and (max-width: 768px) {
+  .features__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
 @media screen and (max-width: 480px) {
   .features__list {
     -webkit-box-orient: vertical;
@@ -610,6 +616,11 @@ template {
   line-height: 1.375rem;
   width: 17.4375rem;
 }
+@media screen and (max-width: 768px) {
+  .features__paragraph {
+    width: auto;
+  }
+}
 .features__image-wrapper {
   display: inline-block;
   width: 7.875rem;
@@ -648,6 +659,9 @@ template {
 
 .footer {
   background: #fff;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 .footer__content {
   background: #fff;
@@ -676,10 +690,6 @@ template {
         -ms-flex-align: center;
             align-items: center;
   }
-}
-.footer__map {
-  position: absolute;
-  bottom: 0;
 }
 
 .form {
@@ -897,7 +907,7 @@ template {
 }
 @media screen and (max-width: 480px) {
   .hero__title {
-    padding: 0 16%;
+    width: 100%;
   }
 }
 .hero__text {
@@ -1062,6 +1072,11 @@ template {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .review__content {
+    margin: 0;
+  }
 }
 .review__title {
   font-weight: bold;
@@ -1265,7 +1280,8 @@ template {
 }
 
 .map__img {
-  min-width: 100%;
+  width: 100%;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1276,6 +1292,9 @@ template {
 }
 
 .hamburger {
+  position: fixed;
+  right: 1.875rem;
+  top: 1.875rem;
   width: 24px;
   height: 24px;
   -webkit-box-orient: vertical;

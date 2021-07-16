@@ -40,6 +40,10 @@ margin-bottom: rem(32px);
   display: flex;
   flex-direction: column;
   margin-left: rem(40px);
+
+  @include tablets {
+    margin: 0;
+  }
   
 }
 &__title {

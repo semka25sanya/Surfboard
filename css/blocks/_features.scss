@@ -42,6 +42,9 @@ margin-bottom: rem(49px);
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: rem(114px);
+  @include tablets{
+    flex-wrap:nowrap;
+  }
 
   @include phones {
     flex-direction: column;
@@ -97,6 +100,9 @@ font-weight: 300;
 font-size: rem(18px);
 line-height: rem(22px);
 width: rem(279px);
+@include tablets {
+  width: auto;
+}
 }
 
 &__image-wrapper {

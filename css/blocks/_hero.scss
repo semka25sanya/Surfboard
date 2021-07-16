@@ -27,7 +27,7 @@
   width: rem(496px);
   margin-bottom: rem(17px);
   @include phones {
-    padding: 0 16%;
+    width:100%;
   }
   
 }
