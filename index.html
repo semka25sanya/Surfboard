@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
   <title>Surfboard</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="sprite.svg">
 </head>
 <body>
   <div class="wrapper">
@@ -18,7 +19,9 @@
     <div class="header__content">
 
   <a href="./index.html" class="logo">
-    <img src="./img/logo.svg" alt="" class="logo__img">
+    <svg class="logo__img">
+      <use xlink:href="./sprite.svg#logo"></use>
+    </svg>   
   </a>
   <nav class="menu">
 <ul class="menu__list">
@@ -45,6 +48,10 @@
   </li>
 </ul>
   </nav>
+
+  <svg class="phone__icon phone__icon--header">
+    <use xlink:href="./sprite.svg#phone"></use>
+  </svg> 
 <a href="tel:+88009039090" class="phone header__phone">8 800 903 90 90</a>
 
 </div>
@@ -63,15 +70,21 @@
     <div class="hero_bottom">
       <ul class="hero_bottom__advantage">
         <li class="hero_bottom__item">
-          <img src="./img/surf.svg" alt="" class="hero_bottom__icon">
+          <svg class="hero_bottom__icon">
+            <use xlink:href="./sprite.svg#surf"></use>
+          </svg> 
           <p class="hero_bottom__text">Уникальный дизайн</p>
         </li>
         <li class="hero_bottom__item">
-          <img src="./img/ring.svg" alt="" class="hero_bottom__icon">
+          <svg class="hero_bottom__icon">
+            <use xlink:href="./sprite.svg#ring"></use>
+          </svg> 
           <p class="hero_bottom__text">Прочные материалы</p>
         </li>
         <li class="hero_bottom__item">
-          <img src="./img/car.svg" alt="" class="hero_bottom__icon">
+          <svg class="hero_bottom__icon">
+            <use xlink:href="./sprite.svg#car"></use>
+          </svg> 
           <p class="hero_bottom__text">Быстрая доставка</p>
         </li>
       </ul>
@@ -89,7 +102,9 @@
         <li class="features__item">
           <div class="features__image">
             <div class="features__image-wrapper">
-          <img src="./img/fit.svg" class="features__icon features__icon--fit" alt="">
+              <svg class="features__icon features__icon--fit">
+                <use xlink:href="./sprite.svg#fit"></use>
+              </svg> 
         </div>
         </div>
         <div class="features__icon-text">
@@ -100,7 +115,9 @@
         <li class="features__item">
           <div class="features__image">
             <div class="features__image-wrapper">
-          <img src="./img/strong.svg" class="features__icon" alt="">
+              <svg class="features__icon">
+                <use xlink:href="./sprite.svg#strong"></use>
+              </svg> 
         </div>
       </div>
       <div class="features__icon-text">
@@ -111,7 +128,9 @@
         <li class="features__item">
           <div class="features__image">
             <div class="features__image-wrapper">
-          <img src="./img/board.svg" class="features__icon" alt="">
+              <svg class="features__icon">
+                <use xlink:href="./sprite.svg#board"></use>
+              </svg>  
         </div>
       </div>
       <div class="features__icon-text">
@@ -263,20 +282,39 @@
        
       <div class="address">
         <p class="address__info">Москва, ул.Новый Арбат, д.31/12</p>
+        <svg class="phone__icon">
+          <use xlink:href="./sprite.svg#phone--dark"></use>
+        </svg>  
         <a href="tel:+88009039090" class="phone phone--normal phone--dark">8 800 903 90 90</a>
       </div>
-      <ul class="social__list">
-        <li class="social__item social__item--vk">
-          <a href="" class="social__link "></a>
+      <ul class="social-list">
+        <li class="social__item ">
+          <a href="" class="social__link ">
+            <svg class="social__network social__network--vk">
+              <use xlink:href="./sprite.svg#vk"></use>
+            </svg>  
+          </a>
         </li>
-        <li class="social__item social__item--fb">
-          <a href="" class="social__link "></a>
+        <li class="social__item">
+          <a href="" class=" social__link ">
+            <svg class="social__network social__network--fb">
+              <use xlink:href="./sprite.svg#fb"></use>
+            </svg>  
+          </a>
         </li>
-        <li class="social__item social__item--insta">
-          <a href="" class="social__link "></a>
+        <li class="social__item ">
+          <a href="" class="social__link ">
+            <svg class="social__network social__network--insta">
+              <use xlink:href="./sprite.svg#insta"></use>
+            </svg>  
+          </a>
         </li>
-        <li class="social__item social__item--tw">
-          <a href="" class="social__link "></a>
+        <li class="social__item ">
+          <a href="" class="social__link ">
+            <svg class="social__network social__network--tw">
+              <use xlink:href="./sprite.svg#tw"></use>
+            </svg>  
+          </a>
         </li>
       </ul>
     </div> 

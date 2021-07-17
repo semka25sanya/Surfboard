@@ -8,17 +8,21 @@ white-space: nowrap;
   font-weight: normal;
 font-size: rem(21px);
 }
-    &:before {
-content: url(../img/phone.svg);
-margin-right: rem(5px);
-flex-shrink: 0;
-}
+   
 
-&--dark {
-  &:before {
-    content: url(../img/phone--dark.svg);
-    margin-right: rem(5px);
+&__icon {
+ 
+    margin-right: rem(2px);
     flex-shrink: 0;
-}
+    width: 14px;
+    height: 14px;
+    &--header {
+      margin-top: 5px;
+      margin-right: 5px;
+      @include tablets {
+        display: none;
+      }
+    }
+
 }
 }

@@ -62,7 +62,15 @@ img {
   align-items: center;
   justify-content: center;
 }
-
+.logo {
+  @include tablets {
+    justify-content: flex-start;
+  }
+}
+.logo__img {
+  width: rem(55px);
+  height: rem(40px);
+}
 .address {
   font-weight: normal;
 font-size: rem(21px);

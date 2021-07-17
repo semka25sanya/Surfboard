@@ -13,28 +13,12 @@
 display: inline-block;
 vertical-align: middle;
 margin-right: rem(14px);
+
 }
 
-&__item--vk &__link{
-  background-image: url(../img/vk.svg);
-
-  }
-
-&__item--fb &__link{
-  background-image: url(../img/fb.svg);
-
-  
-  }
-
-
-&__item--insta &__link{
-background: url(../img/insta.svg);
-}
-
-&__item--tw &__link{
-background:url(../img/tw.svg);
-
-
+&__network {
+  width: 20px;
+  height: 20px;
 }
 
 }

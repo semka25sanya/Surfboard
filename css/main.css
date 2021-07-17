@@ -78,6 +78,19 @@ img {
           justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+  .logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.logo__img {
+  width: 3.4375rem;
+  height: 2.5rem;
+}
+
 .address {
   font-weight: normal;
   font-size: 1.3125rem;
@@ -584,7 +597,7 @@ template {
   }
 }
 .features__item:before {
-  content: url(../img/points.png);
+  content: url(../img/points.svg);
   position: absolute;
   top: 3.75rem;
   right: -1.25rem;
@@ -642,13 +655,9 @@ template {
   height: 4.25rem;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(43%, 40%);
-          transform: translate(43%, 40%);
+  -webkit-transform: translate(4%, 40%);
+          transform: translate(4%, 40%);
   margin-bottom: 1.25rem;
-}
-.features__icon--fit {
-  width: 2.6875rem;
-  margin-left: 1.375rem;
 }
 .features__icon:before {
   content: url(../../img/DgxOuVVhMvw.jpg);
@@ -1111,17 +1120,9 @@ template {
   vertical-align: middle;
   margin-right: 0.875rem;
 }
-.social__item--vk .social__link {
-  background-image: url(../img/vk.svg);
-}
-.social__item--fb .social__link {
-  background-image: url(../img/fb.svg);
-}
-.social__item--insta .social__link {
-  background: url(../img/insta.svg);
-}
-.social__item--tw .social__link {
-  background: url(../img/tw.svg);
+.social__network {
+  width: 20px;
+  height: 20px;
 }
 
 .radio {
@@ -1262,17 +1263,21 @@ template {
   font-weight: normal;
   font-size: 1.3125rem;
 }
-.phone:before {
-  content: url(../img/phone.svg);
-  margin-right: 0.3125rem;
+.phone__icon {
+  margin-right: 0.125rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  width: 14px;
+  height: 14px;
 }
-.phone--dark:before {
-  content: url(../img/phone--dark.svg);
-  margin-right: 0.3125rem;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+.phone__icon--header {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 768px) {
+  .phone__icon--header {
+    display: none;
+  }
 }
 
 .map {
@@ -1289,6 +1294,23 @@ template {
 
 .about {
   background: url(../img/header.backgroungd.png) center center/cover no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .hamburger {
