@@ -28,7 +28,11 @@ padding-top: rem(60px);
 }
 &__col {
   flex: 1;
-  margin-right: rem(20px);
+  margin-right: rem(25px);
+  @include tablets {
+    margin-right: 0;
+  }
+  
 
 &:last-child {
   margin-right: 0;
@@ -55,11 +59,16 @@ padding-top: rem(60px);
     border-color: #FEDB3F;
     outline: none;
   }
+  @include tablets {
+    padding: rem(8px) rem(10px);
+  }
 }
 &__input--textarea {
   height: rem(160px);
   resize: none;
-
+  @include tablets {
+    height: rem(82px);
+  }
 }
 
 

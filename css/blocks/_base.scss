@@ -62,29 +62,4 @@ img {
   align-items: center;
   justify-content: center;
 }
-.logo {
-  @include tablets {
-    justify-content: flex-start;
-  }
-}
-.logo__img {
-  width: rem(55px);
-  height: rem(40px);
-}
-.address {
-  font-weight: normal;
-font-size: rem(21px);
-color: #292929;
-@include phones {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-&__info {
-  @include phones {
-    font-size: rem(16px);
-  }
-}
 
-}
