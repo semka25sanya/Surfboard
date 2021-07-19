@@ -57,7 +57,7 @@ img {
 
 .section {
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container {
@@ -704,6 +704,7 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 38.125rem;
   }
 }
 .form__col {
