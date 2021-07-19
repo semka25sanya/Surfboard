@@ -59,7 +59,10 @@ color: #292929;
 font-size: rem(18px);
 line-height: rem(22px);
 color: #666666;
-width: rem(463px);
+
+@include phones {
+width: rem(450px);
+}
 }
 
 &__name {

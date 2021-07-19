@@ -1,4 +1,5 @@
 .features{
+  display: flex;
   color: #666;
   margin-top: rem(106px);
 
@@ -60,8 +61,10 @@ margin-bottom: rem(49px);
   align-items: center;
   text-align: center;
   position: relative;
+
   @include tablets {
     margin: 0;
+    margin-right: rem(10px);
   }
   @include phones {
     padding: 10px 0;
@@ -103,6 +106,9 @@ line-height: rem(22px);
 width: rem(279px);
 @include tablets {
   width: auto;
+}
+@include phones {
+  width: 90%;
 }
 }
 
