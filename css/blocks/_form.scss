@@ -25,6 +25,10 @@ padding-top: rem(60px);
   @include tablets {
     flex-direction: column;
     width: rem(610px);
+
+  }
+  @include phones {
+    padding:rem(47px);
   }
 }
 &__col {
@@ -77,6 +81,9 @@ padding-top: rem(60px);
 &__controls {
   display: flex;
   flex-wrap: wrap;
+  @include phones {
+    justify-content: center;
+  }
 }
 &__buttons {
   margin-top: rem(47px);
