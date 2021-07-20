@@ -9,6 +9,9 @@
 font-size: rem(16px);
 margin-bottom: rem(85px);
 border: transparent;
+@include tablets {
+  margin-bottom: 0;
+}
 
 &--transparent {
   background: transparent;

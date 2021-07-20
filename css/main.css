@@ -434,6 +434,11 @@ template {
   margin-bottom: 5.3125rem;
   border: transparent;
 }
+@media screen and (max-width: 768px) {
+  .button {
+    margin-bottom: 0;
+  }
+}
 .button--transparent {
   background: transparent;
   color: #fff;
@@ -687,6 +692,9 @@ template {
 .form {
   background: url(../img/review.background.jpg) center center/cover no-repeat;
   color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .form__title-main {
   font-weight: bold;
@@ -695,6 +703,11 @@ template {
   text-transform: uppercase;
   text-align: center;
   padding-top: 3.75rem;
+}
+@media screen and (max-width: 768px) {
+  .form__title-main {
+    padding-top: 0;
+  }
 }
 .form__content {
   padding: 5.125rem;
@@ -710,6 +723,7 @@ template {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 38.125rem;
+    padding: 5.125rem 5.125rem 0 5.125rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1038,6 +1052,9 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .reviews__title {

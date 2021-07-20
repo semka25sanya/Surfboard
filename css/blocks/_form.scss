@@ -1,6 +1,7 @@
 .form {
   background:url(../img/review.background.jpg) center center/cover no-repeat;
   color: #FFFFFF;
+  display: flex;
   
 
 // &__wrapper {
@@ -16,6 +17,10 @@ color:#fff;
 text-transform: uppercase;
 text-align: center;
 padding-top: rem(60px);
+@include tablets {
+  padding-top: 0;
+}
+
 }
 
 &__content {
@@ -25,10 +30,11 @@ padding-top: rem(60px);
   @include tablets {
     flex-direction: column;
     width: rem(610px);
+    padding: rem(82px) rem(82px) 0 rem(82px);
 
   }
   @include phones {
-    padding:rem(47px);
+    padding:rem(47px) ;
   }
 }
 &__col {
