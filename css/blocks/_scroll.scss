@@ -1,0 +1,13 @@
+.left-scroll, .right-scroll {
+  z-index: 1;
+    /* width: 1.8125rem; */
+    height: .875rem;
+    position: absolute;
+    bottom: 0;
+    top: 50%;
+&-button {
+ text-decoration: none;
+}
+}
+
+

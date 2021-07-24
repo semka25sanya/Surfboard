@@ -12,7 +12,9 @@ border: transparent;
 @include tablets {
   margin-bottom: 0;
 }
-
+&--product {
+  margin-bottom: 0;
+}
 &--transparent {
   background: transparent;
   color: #fff;
