@@ -6,6 +6,11 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: 18px;
+  &__icon{
+    width: 14px;
+    height: 27px;
+    
+  }
   &_block {
     display: flex;
     overflow: hidden;
@@ -20,6 +25,13 @@
   margin: 0;
   display: flex;
   justify-content: space-between;
+  @include tablets {
+    flex-direction: column;
+  
+    
+  }
+
+  
   
   &__parameters{
   width: 91px;
@@ -31,6 +43,13 @@ text-transform: uppercase;
 display: flex;
 flex-direction: column;
 align-items: center;
+text-decoration: none;
+@include tablets {
+  display: none;
+}
+&:hover {
+  background: #3465A3;
+}
 &--icon {
   width:rem(38px);
   height: rem(38px);
@@ -40,9 +59,14 @@ align-items: center;
   font-weight: bold;
 font-size: rem(14px);
 }
+
 }
+
 &_list__parameters{
   display: flex;
+  @include tablets {
+    justify-content: center;
+  }
 }
 &_list__item {
   margin-right: 52px;
@@ -52,18 +76,25 @@ font-size: rem(14px);
 }
 &__img {
   display: flex;
-  &:before {
-    content: "";
-    background:url(../img/spot.png) center center/cover no-repeat;
-    width:400px;
-    height: 380px;
-    
+  @include tablets {
+  
+    justify-content: center;
     }
+  @include phones {
+  
+  justify-content: center;
+  }
 }
-&__pic{
-transform: rotate(2deg);
+&__pic {
+  @include phones {
+    width: 306px;
+height: 292px;
+  }
 
-
+  @include phones {
+    width: 252px;
+  height: 331px;
+  }
 }
 &__bottom {
   display: flex;
@@ -75,13 +106,36 @@ transform: rotate(2deg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  max-width: 368px;
+  margin-left: 81px;
+  @include tablets {
+    width:528px ;
+    margin-left: 0;
+    align-items: center;
+   }
 }
+&__text {
+  @include tablets {
+    width:528px ;
+    text-align: center;
+  margin-left: 15%;
+
+    
+   }
+   @include phones {
+    width:360px ;
+margin-left: 0;
+   }
+}
+
   &__title {
     color: #292929;
     font-weight: bold;
     font-size: 36px;
     text-transform: uppercase;
+    @include tablets {
+      align-items: center;
+     }
 
   }
 &__size {
@@ -101,5 +155,9 @@ font-size: 60px;
 text-transform: uppercase;
 color: #151515;
 
+
   }
+
 }
+
+
