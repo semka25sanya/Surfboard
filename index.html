@@ -144,16 +144,17 @@
 
 <section class="section products">
   <div class="left-scroll">
-    <a href="" class="left-scroll-button" id="left">
+    <button class="left-scroll-button" id="left">
       <svg class="products__icon">
       <use xlink:href="./sprite.svg#left"></use>
     </svg>  
-  </a>
+  </button>
   </div>
 <div class="container">
 
-
-<div class="product">
+  <div class="products_block">
+    <ul class="products_block__inner" id="innerProducts">
+<li class="product">
  
   <div class="product__img">
   <img src="./img/board1.png" alt="" class="product__pic">
@@ -245,16 +246,20 @@
     <a href="" class="button button--product">Заказать</a>
   </div>
 </div>
-  </div>
+  </li>
+</ul>
+</div>
 </div>
 
 
+
+
 <div class="right-scroll">
-  <a href="" class="right-scroll-button" id="right">
+  <button  class="right-scroll-button" id="right">
     <svg class="products__icon">
       <use xlink:href="./sprite.svg#right"></use>
     </svg>  
-  </a>
+  </button>
 </div>
 
 </div>
@@ -446,7 +451,7 @@
 
 
   </div>
-  <a href="" class="hamburger">
+  <a href="" class="hamburger" id="burgerbutton">
     <span class="hamburger__plank"></span>
     <span class="hamburger__plank"></span>
     <span class="hamburger__plank"></span>
@@ -465,6 +470,32 @@
       <li class="fixed-menu__item"> <a href="" class="fixed-menu__link"></a></li>
     </ul>
   </nav>
+  <section class="section fullscreen-menu" id="fullscreenmenu">
+    <a href="" class="fullscreen-menu__close" id="closebutton">x</a>
+    <ul class="fullscreen-menu__list">
+<li class="fullscreen-menu__item">
+  <a href="" class="fullscreen-menu__link">О нас</a>
+</li>
+<li class="fullscreen-menu__item">
+  <a href="" class="fullscreen-menu__link">Серфборды</a>
+</li>
+<li class="fullscreen-menu__item">
+  <a href="" class="fullscreen-menu__link">Команда</a>
+</li>
+<li class="fullscreen-menu__item">
+  <a href="" class="fullscreen-menu__link">Меню</a>
+</li>
+<li class="fullscreen-menu__item">
+  <a href="" class="fullscreen-menu__link">Отзывы</a>
+</li>
+<li class="fullscreen-menu__item">
+  <a href="" class="fullscreen-menu__link">Как мы работаем</a>
+</li>
+<li class="fullscreen-menu__item">
+  <a href="" class="fullscreen-menu__link">Контакты</a>
+</li>
+    </ul>
+  </section>
   <script src="./index.js"></script>
 </body>
 </html>

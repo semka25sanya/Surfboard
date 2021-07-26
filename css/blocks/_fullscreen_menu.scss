@@ -1,0 +1,50 @@
+.fullscreen-menu {
+
+  background: #313131;
+   display: flex;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // display: none;
+    width: 100%;
+    z-index: 5;
+    @include tablets {
+      display: block;
+    }
+  &__close  {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    color: #fff;
+    position: absolute;
+left: 90%;
+right: 0%;
+top: 5%;
+bottom: 0%;
+  }
+
+&__list {
+  
+  justify-content: center;
+  align-items: center;
+}
+&__item {
+  padding-bottom: 20px;
+}
+&__link {
+  text-decoration: none;
+  font-style: normal;
+font-weight: normal;
+font-size: 36px;
+color: #fff;
+&:hover {
+  color: #FEDB3F;
+}
+}
+}

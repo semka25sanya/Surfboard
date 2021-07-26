@@ -1478,6 +1478,7 @@ template {
   }
 }
 .product__parameters {
+  position: relative;
   width: 91px;
   height: 91px;
   background: #3A587E;
@@ -1572,6 +1573,7 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 .product__content {
   display: -webkit-box;
@@ -1650,6 +1652,10 @@ template {
 }
 .left-scroll-button, .right-scroll-button {
   text-decoration: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
 }
 
 .left-scroll {
@@ -1682,7 +1688,7 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  right: 26%;
+  left: 100%;
   opacity: 0;
 }
 .parameters-hover__list {
@@ -1723,4 +1729,63 @@ template {
   padding: 16px 0;
   font-style: normal;
   font-weight: normal;
+}
+
+.fullscreen-menu {
+  background: #313131;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+}
+@media screen and (max-width: 768px) {
+  .fullscreen-menu {
+    display: block;
+  }
+}
+.fullscreen-menu__close {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  color: #fff;
+  position: absolute;
+  left: 90%;
+  right: 0%;
+  top: 5%;
+  bottom: 0%;
+}
+.fullscreen-menu__list {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.fullscreen-menu__item {
+  padding-bottom: 20px;
+}
+.fullscreen-menu__link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  color: #fff;
+}
+.fullscreen-menu__link:hover {
+  color: #FEDB3F;
 }

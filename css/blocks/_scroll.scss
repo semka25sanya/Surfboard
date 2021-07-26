@@ -6,8 +6,13 @@
     bottom: 0;
     top: 50%;
     
+    
 &-button {
  text-decoration: none;
+ border: none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
 }
 }
 

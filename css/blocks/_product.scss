@@ -34,6 +34,7 @@
   
   
   &__parameters{
+    position: relative;
   width: 91px;
   height: 91px;
   background: #3A587E;
@@ -100,6 +101,7 @@ height: 292px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   
 }
 &__content {
