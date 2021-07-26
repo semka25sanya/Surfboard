@@ -1,7 +1,7 @@
-let burgerbutton = document.querySelector("#burgerbutton")
-let fullscreenmenu = document.querySelector("#fullscreenmenu")
-let link = document.querySelectorAll(".fullscreen-menu__link")
-let close = document.querySelector("#closebutton");
+var burgerbutton = document.querySelector("#burgerbutton")
+var fullscreenmenu = document.querySelector("#fullscreenmenu")
+var link = document.querySelectorAll(".fullscreen-menu__link")
+var close = document.querySelector("#closebutton");
 
 burgerbutton.addEventListener("click", function(e) {
     e.preventDefault()
@@ -21,7 +21,7 @@ close.addEventListener("click", function() {
 
 const left = document.querySelector("#left")
 const right = document.querySelector("#right")
-const innerProducts = document.querySelector("#innerProducts");
+const slider = document.querySelector("#slider");
 
 left.addEventListener("click", function(e) {
   e.preventDefault
@@ -36,15 +36,15 @@ let maxRight = 1880;
 let step = 940;
 let currentRight = 0;
 
-innerProducts.style.right = currentRight,
+slider.style.right = currentRight,
 right.addEventListener("click", function() {
   currentRight < maxRight && (currentRight += step,
-    innerProducts.style.right = currentRight + "px")
+    slider.style.right = currentRight + "px")
 }),
 
 right.addEventListener("click", function() {
   currentRight > minRight && (currentRight -= step,
-    innerProducts.style.right = currentRight + "px")
+    slider.style.right = currentRight + "px")
 });
 
 
