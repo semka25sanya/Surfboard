@@ -9,15 +9,15 @@ burger.addEventListener("click", function(e) {
 });
 
 burger.addEventListener("click", function(e) {
-  menu.addClass("open");
+  menu.classList.add("open");
 });
 
 closemenu.addEventListener("click", function (e) {
- menu.removeClass("open");
+ menu.classList.remove("open");
 });
 
 item.addEventListener("click", function (e) {
-  menu.removeClass("open");
+  menu.classList.remove("open");
 });
 
 
