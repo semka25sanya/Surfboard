@@ -1,21 +1,37 @@
-var burgerbutton = document.querySelector("#burgerbutton")
-var fullscreenmenu = document.querySelector("#fullscreenmenu")
-var link = document.querySelectorAll(".fullscreen-menu__link")
-var close = document.querySelector("#closebutton");
+var burger = document.querySelector(".hamburger")
+var menu = document.querySelector(".burger-menu")
+var item = document.querySelector(".burger-menu__item")
+var link = document.querySelectorAll(".burger-menu__link")
+var closemenu = document.querySelector(".burger-menu__close");
 
-burgerbutton.addEventListener("click", function(e) {
+burger.addEventListener("click", function(e) {
     e.preventDefault()
 });
-for (var i = 0; i < link.length; i++)
-    link[i].addEventListener("click", function(e) {
-        fullscreenmenu.style.display = "none"
-    });
-    burgerbutton.addEventListener("click", function() {
-        fullscreenmenu.style.display = "block"
-}),
-close.addEventListener("click", function() {
-    fullscreenmenu.style.display = "none"
+
+burger.addEventListener("click", function(e) {
+  menu.addClass("open");
 });
+
+closemenu.addEventListener("click", function (e) {
+ menu.removeClass("open");
+});
+
+item.addEventListener("click", function (e) {
+  menu.removeClass("open");
+});
+
+
+
+// for (var i = 0; i < link.length; i++)
+//     link[i].addEventListener("click", function(e) {
+//         fullscreenmenu.style.display = "none"
+//     });
+//     burgerbutton.addEventListener("click", function() {
+//         fullscreenmenu.style.display = "block"
+// }),
+// close.addEventListener("click", function() {
+//     fullscreenmenu.style.display = "none"
+// });
 
 
 

@@ -1739,7 +1739,8 @@ template {
   font-weight: normal;
 }
 
-.fullscreen-menu {
+.burger-menu {
+  position: fixed;
   background: #313131;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1750,15 +1751,14 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   width: 100%;
-  z-index: 5;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
 }
-.fullscreen-menu__close {
+.burger-menu__close {
+  position: absolute;
   text-decoration: none;
   font-style: normal;
   font-weight: normal;
@@ -1766,11 +1766,13 @@ template {
   color: #fff;
   position: absolute;
   left: 90%;
-  right: 0%;
   top: 5%;
-  bottom: 0%;
 }
-.fullscreen-menu__list {
+.burger-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.burger-menu__list {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1778,16 +1780,16 @@ template {
       -ms-flex-align: center;
           align-items: center;
 }
-.fullscreen-menu__item {
+.burger-menu__item {
   padding-bottom: 20px;
 }
-.fullscreen-menu__link {
+.burger-menu__link {
   text-decoration: none;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   color: #fff;
 }
-.fullscreen-menu__link:hover {
+.burger-menu__link:hover {
   color: #FEDB3F;
 }

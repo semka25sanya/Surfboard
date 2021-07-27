@@ -1,19 +1,17 @@
-.fullscreen-menu {
-
+.burger-menu {
+position: fixed;
   background: #313131;
    display: flex;
    justify-content: center;
    align-items: center;
-   position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    // display: none;
     width: 100%;
-    z-index: 5;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
     
   &__close  {
+    position: absolute;
     text-decoration: none;
     font-style: normal;
     font-weight: normal;
@@ -21,9 +19,11 @@
     color: #fff;
     position: absolute;
 left: 90%;
-right: 0%;
 top: 5%;
-bottom: 0%;
+  }
+  &.open {
+    opacity: 1;
+    pointer-events: all;
   }
 
 &__list {
