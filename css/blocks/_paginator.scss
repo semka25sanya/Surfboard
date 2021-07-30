@@ -2,9 +2,20 @@
   display: flex;
   justify-content: center;
   margin-bottom: rem(60px);
+
   
 
 &__item {
   margin-right: rem(6px);
+    width: rem(80px);
+    height: rem(80px);
+    border: rem(6px) solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
 }
+}
+
+.active {
+  border: rem(6px) solid #FEDB3F;
 }
