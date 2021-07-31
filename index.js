@@ -59,22 +59,23 @@ $('.right-scroll-button').click(e => {
   slider.goToNextSlide();
   });
 
-  const validateFields = (form, fieledsArray) => {
+  // const validateFields = (form, fieledsArray) => {
 
-      fieledsArray.forEach((filed) => {
-        filed.removeClass("input-error");
-        if (field.val().trim() == "") {
-          field.addClass("input-error");
-        }
-      });
+  //     fieledsArray.forEach((filed) => {
+  //       filed.removeClass("input-error");
+  //       if (field.val().trim() == "") {
+  //         field.addClass("input-error");
+  //       }
+  //     });
     
-      const errorFields = form.find(".input-error");
+  //     const errorFields = form.find(".input-error");
     
-      return errorFields.length == 0;
-    }
+  //     return errorFields.length == 0;
+  //   }
   
     $(".form__content").submit(e => {
     e.preventDefault();
+
     const form = $(e.currentTarget);
     const name = form.find("[name='name']");
     const phone = form.find("[name='phone']");

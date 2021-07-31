@@ -558,17 +558,19 @@
           <div class="form__wrapper">
 
             <h2 class="form__title-main">закажите доску</h2>
-            <form class="form__content" autocomplete="off">
+            <form class="form__content" >
               <input type="hidden" name="to" value="somewhere@mail.com">
               <div class="form__col">
                 <div class="form__row">
                   <label class="form__block">
                     <div class="form__title">Имя</div>
                     <input type="text" name="name" class="form__input">
+                    <div class="error"></div>
                   </label>
                   <label class="form__block">
                     <div class="form__title">Телефон</div>
                     <input type="text" name="phone" class="form__input">
+                    <div class="error"></div>
                   </label>
 
                 </div>
@@ -608,6 +610,7 @@
                   <label class="form__block">
                     <div class="form__title">Комментарий</div>
                     <textarea name="comment" class="form__input form__input--textarea"></textarea>
+                    <div class="error"></div>
                   </label>
 
 
