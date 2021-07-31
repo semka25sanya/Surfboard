@@ -5,6 +5,11 @@
     position: absolute;
     bottom: 0;
     top: 50%;
+
+    @include phones {
+top: 30%;
+
+    }
     
     
 &-button {
@@ -18,10 +23,16 @@
 
 .left-scroll {
   left: 8%;
+  @include phones {
+  left: 2%; 
+        }
 }
 
 .right-scroll {
-  
-  right:8%;
+  right: 8%;
+  @include phones {
+    right: 2%; 
+          }
+
 }
 
