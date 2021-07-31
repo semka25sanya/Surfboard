@@ -106,7 +106,7 @@ $('.right-scroll-button').click(e => {
             // modal.addClass("error-modal");
         });
         request.always(() => {
-            $.fancybox.show({
+            $.fancybox.open({
                 src: "#modal",
                 type: "inline"
             });
