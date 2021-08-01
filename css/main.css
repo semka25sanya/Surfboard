@@ -1903,12 +1903,7 @@ template {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  height: 400px;
-}
-@media screen and (max-width: 768px) {
-  .team__item {
-    height: auto;
-  }
+  max-height: 400px;
 }
 .team__item:last-child {
   margin-right: 0;
@@ -2018,6 +2013,8 @@ template {
 .team__item.is_open .team__content {
   height: 400px;
   position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .team__item.is_open .team__content-block {
   width: 221px;

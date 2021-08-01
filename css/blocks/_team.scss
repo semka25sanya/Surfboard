@@ -42,10 +42,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 400px;
-    @include tablets {
-      height: auto;
-    }
+    max-height: 400px;
+    
 
     &:last-child {
       margin-right: 0;
