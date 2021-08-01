@@ -1,9 +1,15 @@
 .modal {
   display: none;
-
+  justify-content: center;
+  top: 50%;
+    z-index: 1;
+    position: relative;
+    
+  
   &.error-modal {
     .modal__content {
       color: red;
+
     }
   }
 
@@ -20,14 +26,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 60 px;
+    padding-bottom: 23px;
+    justify-content: center;
+    width: 309px;
+height: 176px;
   }
   &__content {
     font-weight: 500;
-    margin-bottom: 15px;
+    
+    font-size: 18px;
     color: #000;
+    margin-bottom: 40px;
   }
+
 }
 .input-error {
   border-color: hotpink;
+}
+.open {
+  display: block;
 }

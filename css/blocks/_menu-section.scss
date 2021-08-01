@@ -1,0 +1,43 @@
+.menu-section {
+  background:url(../img/menuback.png) center center/cover no-repeat;
+  position: relative;
+
+  &__title {
+    font-weight: bold;
+font-size: 48px;
+text-transform: uppercase;
+color: #FFF;
+position: absolute;
+top: 10%;
+left:10%;
+  }
+
+  &__list {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+  &__item {
+    display: flex;
+  }
+  &__link {
+    text-decoration: none;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  &__text {
+    display: none;
+  }
+  &__trigger{
+    font-weight: bold;
+    font-size: 48px;
+    color: #FFFFFF;
+    writing-mode: tb-rl;
+
+white-space: nowrap;
+transform: rotate(-180deg);
+  }
+}
