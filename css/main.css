@@ -1905,6 +1905,11 @@ template {
   text-align: center;
   height: 400px;
 }
+@media screen and (max-width: 768px) {
+  .team__item {
+    height: auto;
+  }
+}
 .team__item:last-child {
   margin-right: 0;
 }
