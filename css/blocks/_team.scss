@@ -39,6 +39,7 @@
   }
 
   &__content {
+   
     text-align: center;
     transition: 0.3s;
     opacity: 0;
@@ -47,6 +48,11 @@
     overflow: hidden;
     transition: .3s;
     max-width:220px ;
+     @include tablets {
+    height:0;
+    transition:0.5s;
+    
+  }
     
   }
 
@@ -66,6 +72,10 @@
       .team__content {
         opacity: 1;
         pointer-events: all;
+        @include tablets {
+          height:100%;
+          transition:0.5s;
+        }
       }
       
 
@@ -85,7 +95,7 @@
     &--mb {
       display: none;
       @include tablets {
-        display: flex;
+        display: block;
       }
     }
   }

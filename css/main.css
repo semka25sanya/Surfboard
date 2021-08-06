@@ -1927,6 +1927,13 @@ template {
   transition: 0.3s;
   max-width: 220px;
 }
+@media screen and (max-width: 768px) {
+  .team__content {
+    height: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
 .team__item {
   margin-right: 20px;
 }
@@ -1936,6 +1943,13 @@ template {
 .team__item.is_open .team__content {
   opacity: 1;
   pointer-events: all;
+}
+@media screen and (max-width: 768px) {
+  .team__item.is_open .team__content {
+    height: 100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
 }
 .team__item.is_open .team__content--desc {
   margin-top: 8px;
@@ -1954,9 +1968,7 @@ template {
 }
 @media screen and (max-width: 768px) {
   .team__img--mb {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
   }
 }
 .team__name {
