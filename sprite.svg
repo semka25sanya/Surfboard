@@ -74,6 +74,21 @@
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490" id="triangle">
     <path d="M245 456.701L490 33.299H0z"></path>
   </symbol>
+   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 444 5" id="scale">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.825.458h440.669c.551 0 .997.448.997.997V3.45c0 .55-.446.996-.997.996H1.825a.997.997 0 01-.997-.996V1.455c0-.55.447-.997.997-.997z" fill="#626262"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 17" id="sound icon">
+    <path d="M11.407 9.429l-8.46 6.74c-.808.641-1.998.065-1.998-.967V1.722c0-1.03 1.19-1.607 1.998-.965l8.46 6.74c.614.492.614 1.44 0 1.933z" fill="#fff"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 5" id="sound scale">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.24.458h55.832c.55 0 .997.447.997.997V3.45c0 .55-.446.996-.997.996H1.241a.997.997 0 01-.997-.996V1.455c0-.55.446-.997.997-.997z" fill="#626262"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 17" id="start-button">
+    <path d="M11.188.766L5.016 5.674a3.132 3.132 0 00-1.497-.372 3.158 3.158 0 00-3.16 3.16 3.158 3.158 0 003.16 3.161c.54 0 1.05-.14 1.497-.372l6.172 4.918c.809.641 1.999.065 1.999-.967V1.723c0-1.032-1.19-1.608-1.999-.957z" fill="#fff"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="circle">
+    <path d="M256 0C114.837 0 0 114.837 0 256s114.837 256 256 256 256-114.837 256-256S397.163 0 256 0z" fill="#878787" data-original="#000000" xmlns="http://www.w3.org/2000/svg"></path>
+  </symbol>
 </svg>
 
 
