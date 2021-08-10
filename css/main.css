@@ -79,6 +79,19 @@ img {
           justify-content: center;
 }
 
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.wrapper__content {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  will-change: transform;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -2241,4 +2254,17 @@ template {
   width: 57px;
   height: 4px;
   margin-top: 1px;
+}
+.video-player__paused {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.9;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.video-player__paused-button {
+  width: 82px;
+  height: 118px;
 }

@@ -86,4 +86,16 @@ position: relative;
 height: 4px;
 margin-top: 1px;
   }
+&__paused {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: .9;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    &-button {
+      width: 82px;
+    height: 118px;
+    }
+}
 }

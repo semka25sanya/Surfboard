@@ -57,94 +57,94 @@ $('.left-scroll-button').click(e => {
 $('.right-scroll-button').click(e => {
   e.preventDefault();
   slider.goToNextSlide();
-  });
+});
 
-  const validateFields = (form, fieldsArray) => {
-    fieldsArray.forEach((field) => {
-        if (field.val().trim() == "") {
-            field.addClass("input-error");
-        } else {
-            field.removeClass("input-error");
-        }
-    });
-    const errorFields = form.find(".input-error");
-    return errorFields.length == 0;
+const validateFields = (form, fieldsArray) => {
+  fieldsArray.forEach((field) => {
+    if (field.val().trim() == "") {
+      field.addClass("input-error");
+    } else {
+      field.removeClass("input-error");
+    }
+  });
+  const errorFields = form.find(".input-error");
+  return errorFields.length == 0;
 }
 $(".form__content").submit(e => {
-    e.preventDefault();
-    const form = $(e.currentTarget);
-    const name = form.find("[name='name']");
-    const phone = form.find("[name='phone']");
-    const comment = form.find("[name='comment']");
-    const to = form.find("[name='to']");
-    const modal = $("#modal");
-    const content = modal.find(".modal__message");
-    modal.removeClass("error-modal");
-    const isValid = validateFields(form, [name, phone, comment, to]);
-    if (isValid) {
-        const request = $.ajax({
-            url: "https://webdev-api.loftschool.com/sendmail",
-            method: "post",
-            data: {
-                name: name.val(),
-                phone: phone.val(),
-                comment: comment.val(),
-                to: to.val()
-            }
-        });
-        request.done((data) => {
-            content.text(data.message);
-            e.target.reset();
-        });
-        request.fail((data) => {
-            const message = data.responseJSON.message;
-            content.text(message);
-            modal.addClass("error-modal");
-        });
-        request.always(() => {
-            $('.modal').addClass("open");
-        })
-    }
+  e.preventDefault();
+  const form = $(e.currentTarget);
+  const name = form.find("[name='name']");
+  const phone = form.find("[name='phone']");
+  const comment = form.find("[name='comment']");
+  const to = form.find("[name='to']");
+  const modal = $("#modal");
+  const content = modal.find(".modal__message");
+  modal.removeClass("error-modal");
+  const isValid = validateFields(form, [name, phone, comment, to]);
+  if (isValid) {
+    const request = $.ajax({
+      url: "https://webdev-api.loftschool.com/sendmail",
+      method: "post",
+      data: {
+        name: name.val(),
+        phone: phone.val(),
+        comment: comment.val(),
+        to: to.val()
+      }
+    });
+    request.done((data) => {
+      content.text(data.message);
+      e.target.reset();
+    });
+    request.fail((data) => {
+      const message = data.responseJSON.message;
+      content.text(message);
+      modal.addClass("error-modal");
+    });
+    request.always(() => {
+      $('.modal').addClass("open");
+    })
+  }
 });
 $(".app-submit-button").on("click", function (event) {
-    $('.modal').removeClass("open");
+  $('.modal').removeClass("open");
 });
 
 let player;
 const playerContainer = $(".video-player");
 
 let eventsInit = () => {
-  $(".video-player__icon--start").click(e =>{
+  $(".video-player__icon--start").click(e => {
     e.preventDefault();
 
-    if(playerContainer.hasClass("paused")) {
+    if (playerContainer.hasClass("paused")) {
       playerContainer.removeClass("paused");
       player.pauseVideo();
     } else {
       playerContainer.addClass("paused");
-        player.playVideo();
+      player.playVideo();
 
     }
   });
 
 
-$(".video-player__lenght-scale").click(e => {
-  const bar = $(e.currentTarget);
-  const clickedPosition = e.originalEvent.layerX;
-  const newButtonPositionPercent = (clickedPosition / bar.width()) * 100 ;
- const newPlayPositionSec = (player.getDuration()/100) * newButtonPositionPercent;
+  $(".video-player__lenght-scale").click(e => {
+    const bar = $(e.currentTarget);
+    const clickedPosition = e.originalEvent.layerX;
+    const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+    const newPlayPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
 
- $(".video-player__circle").css({
-   left: `${newButtonPositionPercent}%`
- });
- player.seekTo(newPlayPositionSec);
-});
+    $(".video-player__circle").css({
+      left: `${newButtonPositionPercent}%`
+    });
+    player.seekTo(newPlayPositionSec);
+  });
 };
 
 
- $(".video-player__splash").click(e => {
-   player.playVideo();
- })
+$(".video-player__splash").click(e => {
+  player.playVideo();
+})
 
 
 const onPlayerStateChange = event => {
@@ -154,92 +154,147 @@ const onPlayerStateChange = event => {
       playerContainer.addClass("video-player--paused")
       break;
 
-      case 2:
-        playerContainer.removeClass("video-player--active");
-        playerContainer.removeClass("video-player--paused")
-        break;
+    case 2:
+      playerContainer.removeClass("video-player--active");
+      playerContainer.removeClass("video-player--paused")
+      break;
 
   }
 };
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('yt-video-player', {
-          height: '405',
-          width: '660',
-          videoId: 'LXb3EKWsInQ',
-          events: {
-            // 'onReady': onPlayerReady,
-            // 'onStateChange': onPlayerStateChange
-          },
-          playerVars: {
-            controls:0,
-            disablekb:0,
-            showinfo:0,
-            rel:0,
-            autoplay:0,
-            modestbranding:0
-          }
-        });
-      }
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt-video-player', {
+    height: '405',
+    width: '660',
+    videoId: 'LXb3EKWsInQ',
+    events: {
+      // onReady: onPlayerReady,
+      // `onStateChange`: onPlayerStateChange
+    },
+    playerVars: {
+      controls: 0,
+      disablekb: 0,
+      showinfo: 0,
+      rel: 0,
+      autoplay: 0,
+      modestbranding: 0
+    }
+  });
+}
 
-      eventsInit();
+eventsInit();
+
+let myMap;
+
+const init = () => {
+  myMap = new ymaps.Map("map", {
+    center: [55.76, 37.64],
+    zoom: 7
+  });
+}
+
+ymaps.ready(init);
+
+// const verticalAcc = () => {
+//   const links = document.querySelectorAll(".menu-section__link");
+//   const body = document.querySelector('body');
+
+//   const calculateWidth = () => {
+//     const windowWidth = window.innerWidth;
+
+//     const MAX_WIDTH = 550;
+
+//     const linksWidth = links[0].offsetWidth;
+
+//     const reqWidth = windowWidth - (linksWidth * links.length);
+
+//     return reqWidth > MAX_WIDTH ? MAX_WIDTH : reqWidth;
+
+//   };
+
+//   function closeItem(activeElement) {
+//     const activeText = activeElement.querySelector(".menu-section__content");
+//     activeText.style.width = "0px";
+//     activeElement.classList.remove("active--item");
+//   }
+//   links.forEach(function (elem) {
+//     elem.addEventListener("click", function (e) {
+//       e.preventDefault();
+//       const link = e.target.closest(".menu-section__link");
+
+//       const active = document.querySelector("active--item");
+//       console.log(active)
+
+//       if (active) {
+//         closeItem(active);
+//       }
+
+//       if (!active || active.querySelector(".menu-section__link") !== link) {
+//         const current = link.closest(".menu-section__item");
+//         current.classList.add("active--item");
+//         const currentText = current.querySelector(".menu-section__content");
+//         if (body.offsetWidth > 480) {
+//           currentText.style.width = calculateWidth() + 'px';
+
+//         } else {
+//           currentText.style.width = '100%';
+//         }
+//       }
+//     });
+
+//   });
+
+
+
+
+  const sections = $("section");
+  const display = $(".wrapper__content");
+
+
+let inScroll = false;
+
+sections.first().addClass("active-section");
+
+  const performTransition = (sectionEq) => {
+    if (inScroll === false) {
+inScroll = true;
     
-    let myMap;
+    const position = sectionEq * -100;
 
-    const init = () => {
-      myMap = new ymaps.Map("map", {
-        center: [55.76, 37.64],
-        zoom: 7
-      });
+    display.css({
+      transform: `translateY(${position}%)`
+    });
+
+    sections.eq(sectionEq).addClass("active-section").siblings().removeClass("active-section");
+    setTimeout(() => {
+      inScroll = false;
+
+    }, 1300);
+  
+  }
+  };
+
+
+  const scrollViewport = direction => {
+    const activeSection = sections.filter(".active-section");
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    if (direction === "next" && nextSection.length) {
+performTransition(nextSection.index());
+    }
+    if (direction === "prev" && prevSection.length) {
+performTransition(prevSection.index());
+    }
+  };
+
+  $(window).on("wheel", e => {
+    const deltaY = e.originalEvent.deltaY;
+
+    if (deltaY > 0) {
+      scrollViewport("next");
+    }
+    if (deltaY < 0) {
+      scrollViewport("prev");
     }
 
-    ymaps.ready(init);
-
-    const verticalAcc = () => {
-      const links = document.querySelectorAll(".menu-section__link");
-      const body = document.querySelector('body');
-
-      const calculateWidth = () => {
-        const windowWidth = window.innerWidth;
-
-        const MAX_WIDTH = 550;
-
-        const linksWidth = links[0].offsetWidth;
-
-        const reqWidth = windowWidth - (linksWidth * links.length);
-
-        return reqWidth > MAX_WIDTH ? MAX_WIDTH : reqWidth;
-    
-      };
-
-      function closeItem(activeElement) {
-        const activeText = activeElement.querySelector(".menu-section__content");
-        activeText.style.width = "0px";
-        activeElement.classList.remove("active--item");
-      }
-      links.forEach(function(elem){
-        elem.addEventListener("click", function(e){
-          e.preventDefault();
-          const link = e.target.closest(".menu-section__link");
-
-          const active = document.querySelector("active--item");
-          console.log(active)
-
-          if(active) {
-            closeItem(active);
-          }
-
-          if (!active || active.querySelector(".menu-section__link") !== link) {
-            const current = link.closest(".menu-section__item");
-          current.classList.add("active--item");
-          const currentText = current.querySelector(".menu-section__content");
-          if (body.offsetWidth> 480) {
-            currentText.style.width = calculateWidth() + 'px';
-
-          } else {
-            currentText.style.width = '100%';
-          }
-          }
-        });
-
-      });
-    }
+  });
