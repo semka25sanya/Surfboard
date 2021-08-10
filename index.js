@@ -188,8 +188,28 @@ let myMap;
 const init = () => {
   myMap = new ymaps.Map("map", {
     center: [55.76, 37.64],
-    zoom: 7
+    zoom: 12,
+    controls: []
   });
+  const coords = [
+    [55.75, 37.50],
+    [55.75, 37.71],
+    [55.70, 37.70]
+];
+var myCollection = new ymaps.GeoObjectCollection({}, {
+    
+    draggable: false,
+    iconLayout: 'default#image',
+    iconImageHref: "./img/marker.svg",
+    iconImageSize: [30, 42],
+    iconImageOffset: [-3, -42]
+});
+coords.forEach(coord => {
+  myCollection.add(new ymaps.Placemark(coord));
+});
+myMap.geoObjects.add(myCollection);
+
+myMap.behaviors.disable('scrollZoom');
 }
 
 ymaps.ready(init);
@@ -260,14 +280,27 @@ inScroll = true;
     
     const position = sectionEq * -100;
 
+    const currentSection = sections.eq(sectionEq);
+    const menuTheme = currentSection.attr("data-sidemenu-theme");
+    const sideMenu = $(".fixed-menu");
+
+    if (menuTheme === "black") {
+      sideMenu.addClass("fixed-menu--shadowed");
+    } else {
+      sideMenu.removeClass("fixed-menu--shadowed");
+    }
+
     display.css({
       transform: `translateY(${position}%)`
     });
 
     sections.eq(sectionEq).addClass("active-section").siblings().removeClass("active-section");
+    
+    
+    
     setTimeout(() => {
       inScroll = false;
-
+ sideMenu.find(".fixed-menu__item").eq(sectionEq).addClass("fixed-menu__item--active").siblings().removeClass("fixed-menu__item--active");
     }, 1300);
   
   }
@@ -287,7 +320,7 @@ performTransition(prevSection.index());
     }
   };
 
-  $(window).on("wheel", e => {
+  $(window).on("wheel", (e) => {
     const deltaY = e.originalEvent.deltaY;
 
     if (deltaY > 0) {
@@ -298,3 +331,30 @@ performTransition(prevSection.index());
     }
 
   });
+
+  $(window).on("keydown", (e) => {
+    const tagName = e.target.tagName.toLowerCase();
+
+    if (tagName !== "input" && tagName !== "textarea") {
+     switch (e.keyCode) {
+       case 38:
+         scrollViewport ("prev");
+         break;
+
+         case 40:
+           scrollViewport("next");
+           break;
+     }
+     }
+  });
+
+  $("[data-scroll-to]").click(e => {
+    e.preventDefault();
+
+    const $this = $(e.currentTarget);
+    const target = $this.attr("data-scroll-to");
+    const reqSection = $(`[data-section-id=${target}]`);
+
+    performTransition(reqSection.index());
+  });
+

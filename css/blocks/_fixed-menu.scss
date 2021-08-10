@@ -52,3 +52,34 @@
     display: none;
   }
 }
+
+.fixed-menu--shadowed {
+
+
+.fixed-menu {
+    
+    &__item {
+        &.active {
+            .fixed-menu__link {
+                border: rem(1px) solid #000;
+                &::after {
+                    background: #000;
+                }
+            }
+        }
+    }
+    &__link {
+        &::after {
+            
+            background: #000;
+           
+        }
+        &:hover {
+            border: rem(1px) solid #000;
+            &::after {
+                background: #000;
+            }
+        }
+    }
+}
+}

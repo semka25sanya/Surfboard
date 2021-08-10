@@ -18,7 +18,7 @@
 <body>
   <div class="wrapper">
     <div class="wrapper__content">
-      <section class="section about">
+      <section data-sidemenu-theme="white" data-section-id="about" class="section about">
         <header class="header">
           <div class="container header__container">
             <div class="header__content">
@@ -31,25 +31,25 @@
               <nav class="menu">
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a href="" class="menu__link">О нас</a>
+                    <a href="" data-scroll-to="features" class="menu__link">О нас</a>
                   </li>
                   <li class="menu__item">
-                    <a href="" class="menu__link">Серфборды</a>
+                    <a href="" data-scroll-to="products" class="menu__link">Серфборды</a>
                   </li>
                   <li class="menu__item">
-                    <a href="" class="menu__link">Команда</a>
+                    <a href="" data-scroll-to="team-section" class="menu__link">Команда</a>
                   </li>
                   <li class="menu__item">
-                    <a href="" class="menu__link">Меню</a>
+                    <a href="" data-scroll-to="menu-section" class="menu__link">Меню</a>
                   </li>
                   <li class="menu__item">
-                    <a href="" class="menu__link">Отзывы</a>
+                    <a href="" data-scroll-to="reviews" class="menu__link">Отзывы</a>
                   </li>
                   <li class="menu__item">
-                    <a href="" class="menu__link">Как мы работаем</a>
+                    <a href="" data-scroll-to="video" class="menu__link">Как мы работаем</a>
                   </li>
                   <li class="menu__item">
-                    <a href="" class="menu__link">Контакты </a>
+                    <a href="" data-scroll-to="map-section" class="menu__link">Контакты </a>
                   </li>
                 </ul>
               </nav>
@@ -97,7 +97,7 @@
 
         </div>
       </section>
-      <section class="section features">
+      <section data-sidemenu-theme="black" data-section-id="features" class="section features">
         <div class="container">
           <div class="features__content">
             <h2 class="features__main-title">почему Surfboard?</h2>
@@ -151,7 +151,7 @@
         </div>
       </section>
 
-      <section class="section products">
+      <section data-sidemenu-theme="black" data-section-id="products" class="section products">
         <div class="container">
           <div class="left-scroll">
             <button class="left-scroll-button">
@@ -374,7 +374,7 @@
 
         </div>
       </section>
-      <section class="section team-section">
+      <section data-sidemenu-theme="black" data-section-id="team-section" class="section team-section">
         <div class="container">
           <div class="team__title">команда</div>
           <ul class="team ">
@@ -544,7 +544,7 @@
         </div>
 
       </section>
-      <section class="section menu-section">
+      <section data-sidemenu-theme="white" data-section-id="menu-section" class="section menu-section">
         <div class="menu-section__title">меню</div>
         <ul class="menu-section__list">
           <li class="menu-section__item">
@@ -590,7 +590,7 @@
           </li>
         </ul>
       </section>
-      <section class="section reviews">
+      <section data-sidemenu-theme="black" data-section-id="reviews" class="section reviews">
         <div class="container">
           <div class="reviews__title">отзывы</div>
           <div class="reviews__display">
@@ -672,7 +672,7 @@
           </div>
         </div>
       </div>
-      <section class="section video">
+      <section data-sidemenu-theme="black" data-section-id="video" class="section video">
         <div class="container">
           <h2 class="video__title">как мы работаем</h2>
           <div class="video__container">
@@ -720,7 +720,7 @@
         </div>
     
     </section>
-    <section class="section form">
+    <section data-sidemenu-theme="white" data-section-id="form" class="section form">
 
       <div class="container">
 
@@ -819,7 +819,7 @@
 
     </section>
 
-    <section class="section map" >
+    <section data-sidemenu-theme="black" data-section-id="map-section" class="section map" >
       <div id="map" style="width: 100%; height: 100%"></div>
       <!-- <img src="./img/map.png" alt="" class="map__img"> -->
 
@@ -908,17 +908,17 @@
     </ul>
   </div>
 
-  <nav class="fixed-menu">
+  <nav class="fixed-menu ">
     <ul class="fixed-menu__list">
-      <li class="fixed-menu__item fixed-menu__item--active"> <a href="" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"> <a href="" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"> <a href="" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"> <a href="" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"> <a href="" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"> <a href="" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"> <a href="" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"> <a href="" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"> <a href="" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item fixed-menu__item--active"> <a href="" data-scroll-to="about" class="fixed-menu__link"></a></li>
+      <li  class="fixed-menu__item"> <a href="" data-scroll-to="features" class="fixed-menu__link"></a></li>
+      <li  class="fixed-menu__item"> <a href="" data-scroll-to="products" class="fixed-menu__link"></a></li>
+      <li  class="fixed-menu__item"> <a href="" data-scroll-to="team-section" class="fixed-menu__link"></a></li>
+      <li  class="fixed-menu__item"> <a href="" data-scroll-to="menu-section" class="fixed-menu__link"></a></li>
+      <li  class="fixed-menu__item"> <a href="" data-scroll-to="reviews" class="fixed-menu__link"></a></li>
+      <li  class="fixed-menu__item"> <a href="" data-scroll-to="video" class="fixed-menu__link"></a></li>
+      <li  class="fixed-menu__item"> <a href="" data-scroll-to="form" class="fixed-menu__link"></a></li>
+      <li  class="fixed-menu__item"> <a href="" data-scroll-to="map-section" class="fixed-menu__link"></a></li>
     </ul>
   </nav>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
