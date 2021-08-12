@@ -92,6 +92,9 @@
    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163.861 163.861" id="play-button">
     <path d="M34.857 3.613C20.084-4.861 8.107 2.081 8.107 19.106v125.637c0 17.042 11.977 23.975 26.75 15.509L144.67 97.275c14.778-8.477 14.778-22.211 0-30.686L34.857 3.613z" fill="#fff" data-original="#000000" xmlns="http://www.w3.org/2000/svg"></path>
   </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.607 47.607" id="paused-bottom">
+    <path d="M17.991 40.976a6.631 6.631 0 01-13.262 0V6.631a6.631 6.631 0 0113.262 0v34.345zm24.886 0a6.631 6.631 0 01-13.262 0V6.631a6.631 6.631 0 0113.262 0v34.345z" fill="#fff" data-original="#000000" xmlns="http://www.w3.org/2000/svg"></path>
+  </symbol>
 </svg>
 
 

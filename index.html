@@ -11,7 +11,7 @@
   <title>Surfboard</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="./src/css/main.css">
   <link rel="stylesheet" href="sprite.svg">
 </head>
 
@@ -548,8 +548,8 @@
         <div class="menu-section__title">меню</div>
         <ul class="menu-section__list">
           <li class="menu-section__item">
-            <a href="" class="menu-section__link" style="background-image:url(./img/menulong.png)">
-              <span class="menu-section__trigger">Лонгборды</span>
+            <a href="" class="menu-section__trigger" style="background-image:url(./img/menulong.png)">
+              <span class="menu-section__trigger--text">Лонгборды</span>
             </a>
             <div class="menu-section__content">
               
@@ -563,9 +563,10 @@
             </div>
           </li>
           <li class="menu-section__item">
-            <a href="" class="menu-section__link" style="background-image:url(./img/menushort.png)">
-              <span class="menu-section__trigger">Шортборды</span>
+            <a href="" class="menu-section__trigger" style="background-image:url(./img/menushort.png)">
+              <span class="menu-section__trigger--text">Шортборды</span>
             </a>
+            
             <div class="menu-section__content">
               <p class="menu-section__text">Устойчивая доска для новичков. На них легко лежать, сидеть, грести,
                 разгребаться
@@ -576,8 +577,8 @@
             </div>
           </li>
           <li class="menu-section__item">
-            <a href="" class="menu-section__link" style="background-image:url(./img/menusoft.png)">
-              <span class="menu-section__trigger">Софттопы</span>
+            <a href="" class="menu-section__trigger" style="background-image:url(./img/menusoft.png)">
+              <span class="menu-section__trigger--text">Софттопы</span>
             </a>
             <div class="menu-section__content">
               <p class="menu-section__text">Устойчивая доска для новичков. На них легко лежать, сидеть, грести,
@@ -665,10 +666,16 @@
         <div class="container">
           <h2 class="video__title">как мы работаем</h2>
           <div class="video__container">
-            <div class="video-player video-player--active">
+            <div class="video-player">
               <div class="video-player__wrapper">
                 <div id="yt-video-player" class="video-player__elem"></div>
-                <div class="video-player__splash"></div>
+                <div class="video-player__splash">
+                  <div class="video-player__paused" >
+                    <svg class="video-player__paused-button">
+                      <use xlink:href="./sprite.svg#play-button"></use>
+                    </svg>
+                  </div>
+                </div>
 
               </div>
               <div class="video-player__bottom">
@@ -677,6 +684,12 @@
                     <use xlink:href="./sprite.svg#sound icon"></use>
                   </svg>
                 </button>
+                  <!-- <button class="video-player__icon video-player__icon--paused" >
+                    <svg class="video-player__button">
+                      <use xlink:href="./sprite.svg#paused-bottom"></use>
+                    </svg>
+                  </button> -->
+               
 
                 <div class="video-player__lenght-scale">
 
@@ -685,7 +698,7 @@
 
                 </div>
 
-                <button class="video-player__icon">
+                <!-- <button class="video-player__icon">
                   <svg class="video-player__button">
                     <use xlink:href="./sprite.svg#start-button"></use>
                   </svg>
@@ -693,16 +706,15 @@
 
                 <div class="video-player__scale-icon">
 
+                </div> -->
+                <div class="video-player__duration" style="color: #fff;">
+                  <span class="video-player__duration-completed" style="margin-right: 10px;">0:00</span>
+                  <span class="video-player__duration-estimate">0:00</span>
                 </div>
 
 
-
               </div>
-              <div class="video-player__paused" style="display: block;">
-                <svg class="video-player__paused-button">
-                  <use xlink:href="./sprite.svg#play-button"></use>
-                </svg>
-              </div>
+              
             </div>
           </div>
 
@@ -932,7 +944,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
   <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
-  <script src="./index.js"></script>
+  <script src="./src/scripts/index.js"></script>
 
 </body>
 
